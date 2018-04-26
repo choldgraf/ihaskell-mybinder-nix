@@ -1,11 +1,11 @@
 let
   nixpkgs = import (builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs-channels/archive/d16ffa1509008b53891412b095cea259dd73d869.tar.gz";
-    sha256 = "0ir4cbld2c5h31aiap9jhj7mpl0nw2yvr9lmw6zn8ndidniv8ki3";
+    url = "https://github.com/NixOS/nixpkgs-channels/archive/06c576b0525da85f2de86b3c13bb796d6a0c20f6.tar.gz";
+    sha256 = "01cra89drfjf3yhii5na0j5ivap2wcs0h8i0xcxrjs946nk4pp5j";
   }) {};
   ihaskell = builtins.fetchTarball {
-    url = "https://github.com/gibiansky/IHaskell/archive/2d43d305d1b0e50ed8dcdcc6b959ef3f3d9cdc0e.tar.gz";
-    sha256 = "0y1a13irikyziva5b4fh3vhmncrh0fdn4dj7k2ar65zj41yd9l13";
+    url = "https://github.com/gibiansky/IHaskell/archive/1a8db7b92fc5638b62ced8fb03952b14a9e807f1.tar.gz";
+    sha256 = "01r9fp40b1qfdah817csldqpyyszaxla64q41kaa2nb588ah6gg1";
   };
 in import "${ihaskell}/release.nix" {
   inherit nixpkgs;

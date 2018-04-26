@@ -6,7 +6,7 @@ ENV HOME /home/${NB_USER}
 ENV PATH ${HOME}:$PATH
 
 RUN nix-shell \
-    -I nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/d16ffa1509008b53891412b095cea259dd73d869.tar.gz \
+    -I nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/06c576b0525da85f2de86b3c13bb796d6a0c20f6.tar.gz \
     -p busybox \
     --run "adduser --disabled-password --gecos 'Default user' --uid ${NB_UID} ${NB_USER}" \
     && nix-collect-garbage -d
