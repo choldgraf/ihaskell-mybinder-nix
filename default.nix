@@ -9,4 +9,5 @@ let
   };
 in import "${ihaskell}/release.nix" {
   inherit nixpkgs;
+  compiler = "ghc822";
 }
