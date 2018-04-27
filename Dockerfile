@@ -11,6 +11,8 @@ RUN nix-shell \
     --run "adduser --disabled-password --gecos 'Default user' --uid ${NB_UID} ${NB_USER}" \
     && nix-collect-garbage -d
 
+RUN pip install --no-cache-dir notebook==5.*
+
 COPY . ${HOME}
 USER root
 WORKDIR ${HOME}
