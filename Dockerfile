@@ -18,7 +18,8 @@ RUN chown -R ${NB_UID} ${HOME}
 RUN chown -R ${NB_UID} /tmp
 
 RUN nix-build default.nix && nix-collect-garbage -d
-RUN pip install --no-cache-dir notebook==5.*
+RUN jupyter notebook --version
+RUN blahdfdsdfs
 
 USER ${NB_USER}
 
